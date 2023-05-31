@@ -16,7 +16,7 @@ const questionsData =[
     {
         'id': '3',
         'q': 'What type of data collected by F4nsix?',
-        'a' : ['F4nsix collects only IP address for some analysis and other parties such scripts and ad provider may collect other data.']
+        'a' : ['F4nsix collects only IP address when you post or comment anything for some analysis and reasons, other parties such scripts and ad provider may collect other data.']
     },
     {
         'id': '4',
