@@ -1,6 +1,6 @@
 import { observable } from "mobx";
 import { observer } from "mobx-react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Loading from "./Loading";
 import { supabase } from "../supabase";
 import { BsFillExclamationCircleFill } from "react-icons/bs";
@@ -158,6 +158,12 @@ const Posts = observer(({ addNote }) => {
                         PostsState.posts.length > 0 ?
                             <div className="flex flex-col w-full max-w-xl max-md:pb-20">
                                 {PostsState.posts.map(post => {
+                                    if(parsInt(Math.random()*99)%7 === 0){
+                                        return <React.Fragment key={post.reference_id+'.'+new Date().toISOString()}>
+                                            <GAd />
+                                            <Post {...post} key={post.reference_id} />
+                                        </React.Fragment>
+                                    }
                                     return <Post {...post} key={post.reference_id} />
                                 })}
                             </div>
