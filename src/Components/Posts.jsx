@@ -128,7 +128,7 @@ const Posts = observer(({ addNote }) => {
     }, [PostsState.watchingCategory])
 
     useEffect(() => {
-        document.title = "All posts"
+        document.title = "All posts - F4nsix"
 
         if(PostsState.isLoadFirstTime === true){
             PostsState.setLoading()
