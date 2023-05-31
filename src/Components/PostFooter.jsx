@@ -21,8 +21,10 @@ const PostFooter = (props) => {
 
     return (
         <>
+            <Link to={`/p/${props.reference_id}`}>
             <div className="px-4 py-1 mb-2 text-lg whitespace-pre-wrap" dangerouslySetInnerHTML={{__html: POST_CONTENT}}>
             </div>
+            </Link>
             <div className="mx-2 flex">
                 <span className="block bg-zinc-300/50 dark:bg-zinc-800 dark:text-white py-1 p-2 rounded text-xs m-1">
                     {getCountryByCode(props.country).name}

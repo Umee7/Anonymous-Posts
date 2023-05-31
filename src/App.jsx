@@ -10,6 +10,7 @@ import Notes from "./Components/Notes";
 import cuid2 from "@paralleldrive/cuid2";
 import SpecificPost from "./Components/SpecificPost";
 import Questions from "./Components/Questions";
+import NotFound from "./Components/NotFound";
 
 
 const AppState = observable({
@@ -62,6 +63,7 @@ const App = observer(() => {
                             <Route path="/p/:referenceId" element={<SpecificPost addNote={AppState.addNote} />} />
                             <Route path="/new" element={<NewPost addNote={AppState.addNote} />} />
                             <Route path="/faqs" element={<Questions addNote={AppState.addNote} />} />
+                            <Route path="*" element={<NotFound addNote={AppState.addNote} />} />
                         </Routes>
                     </div>
                 </div>

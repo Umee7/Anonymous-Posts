@@ -61,7 +61,7 @@ const SpecificPost = observer(({addNote}) => {
         </div>
         :
         <div className="text-center">
-            <h1 className="text-2xl my-5">Not Found</h1>
+            <h2 className="text-2xl my-5">Not Found</h2>
             <p>Post does not exists, if you've entered the URL manually then check and tryagain!</p>
         </div>
         :

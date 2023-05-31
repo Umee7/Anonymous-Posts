@@ -6,7 +6,7 @@ const GAd = () => {
     },[])
 
     return(        
-        <ins class="adsbygoogle"
+        <ins className="adsbygoogle"
             style={{
                 display: "block",
                 textAlign: "center"

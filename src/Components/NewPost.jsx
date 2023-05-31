@@ -206,7 +206,7 @@ const NewPost = observer(({ addNote }) => {
     return (
         <div className="p-5">
             <form className="w-full max-w-xl mx-auto my-10 mx-1" onSubmit={sendPost}>
-                <h1 className="text-2xl my-8 text-black dark:text-white">New Post</h1>
+                <h2 className="text-2xl my-8 text-black dark:text-white">New Post</h2>
                 <InputBox
                     inputType={'text'}
                     labelName={'Post title'}

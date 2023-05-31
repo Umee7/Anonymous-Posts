@@ -52,7 +52,7 @@ const Questions = () => {
 
     return(
         <div className="p-2 py-5">
-            <h1 className="text-3xl font-bold my-5 text-center">FAQs</h1>
+            <h2 className="text-3xl font-bold my-5 text-center">FAQs</h2>
             <div className="p-5">
                 {questionsData.map(qa => <Question question={qa.q} answer={qa.a} key={qa.id} />)}
             </div>

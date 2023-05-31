@@ -3,7 +3,7 @@ import { dateMapper } from "../functions";
 const SpecificPostHeader = (props) => {
     return (
         <div className="p-2 px-4 rounded-t">
-            <h1 className="block text-3xl my-1 font-hand">{props.title}</h1>
+            <h2 className="block text-3xl my-1 font-hand">{props.title}</h2>
             <span className="flex items-center">
                 {
                     props.username ?
