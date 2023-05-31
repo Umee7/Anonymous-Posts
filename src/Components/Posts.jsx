@@ -158,12 +158,6 @@ const Posts = observer(({ addNote }) => {
                         PostsState.posts.length > 0 ?
                             <div className="flex flex-col w-full max-w-xl max-md:pb-20">
                                 {PostsState.posts.map(post => {
-                                    if(parseInt(Math.random()*99)%7 === 0){
-                                        return <React.Fragment key={new Date().toISOString()}>
-                                            <GAd />
-                                            <Post {...post} key={post.reference_id} />
-                                        </React.Fragment>
-                                    }
                                     return <Post {...post} key={post.reference_id} />
                                 })}
                             </div>
