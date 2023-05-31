@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Question from "./Question";
+import GAd from "./GAd";
 
 const questionsData =[
     {
@@ -55,6 +56,7 @@ const Questions = () => {
             <div className="p-5">
                 {questionsData.map(qa => <Question question={qa.q} answer={qa.a} key={qa.id} />)}
             </div>
+            <GAd />
         </div>
     )
 }
