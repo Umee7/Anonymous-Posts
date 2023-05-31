@@ -35,7 +35,7 @@ const questionsData =[
     },
     {
         'id': '7',
-        'q': 'Can you use Markdown or HTML in post content?',
+        'q': 'Can I use Markdown or HTML in post content?',
         'a': ['No, you can\'t use Markdown or HTML tags in the post content.', 'To add images or video you can upload it and for hyperlinks it will automatically be shown as link in the post!']
     },
     {
