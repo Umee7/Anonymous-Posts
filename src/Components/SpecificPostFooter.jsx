@@ -14,7 +14,7 @@ const SpecificPostFooter = (props) => {
     }
 
     const POST_CONTENT =  (escapeOutput(props.content) || "").replace(/(https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/ig, (k)=>{
-        return `<a style="text-decoration: underline;" href="${k}">${k}</a>`
+        return `<a style="text-decoration: underline;" target="_blank" href="${k}">${k}</a>`
     })
 
     return (
