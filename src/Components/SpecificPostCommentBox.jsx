@@ -14,7 +14,6 @@ const SpecificPostCommentBox = observer(({referenceid, addNote, addComment}) => 
     }))
 
     const sendComment = async() => {
-        console.log(state.commentData.length);
         if(state.commentData.length === 0 ){
             addNote("Cannot comment empty text!", "error")
             return
