@@ -43,6 +43,8 @@ const SpecificPost = observer(({addNote}) => {
                 SpecificPostState.setPostData(data[0])
                 SpecificPostState.setFound()
                 document.title = SpecificPostState.postData.title
+            } else {
+                document.title = 'Post not found!'
             }
         }
     }
@@ -57,7 +59,7 @@ const SpecificPost = observer(({addNote}) => {
         SpecificPostState.found === true ?
         <div className="pb-16">
             <Post {...SpecificPostState.postData} isSpecificPost={true} />
-            <SpecificPostCommentsFull {...SpecificPostState.postData} addNote={addNote} updateCommentCount={count => SpecificPostState.setCommentCount(count)} />
+            <SpecificPostCommentsFull {...SpecificPostState.postData} addNote={addNote} updateCommentCount={SpecificPostState.setCommentCount} />
         </div>
         :
         <div className="text-center">
