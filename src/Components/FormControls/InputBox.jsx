@@ -17,7 +17,7 @@ const InputBox = ({mainElementMargin, labelName, inputType, minLength, maxLength
                             onChange(e)
                         } else {
                             if(e.target.value.length <= maxLength){
-                                updateData(e.target.value.trim())
+                                updateData(e.target.value)
                             }
                         }
                     }}
@@ -38,7 +38,7 @@ const InputBox = ({mainElementMargin, labelName, inputType, minLength, maxLength
                             onChange(e)
                         } else {
                             if(e.target.value.length <= maxLength){
-                                updateData(e.target.value.trim())
+                                updateData(e.target.value)
                             }
                         }
                     }}
