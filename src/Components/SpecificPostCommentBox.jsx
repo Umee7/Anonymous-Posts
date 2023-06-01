@@ -18,14 +18,14 @@ const SpecificPostCommentBox = observer(({referenceid, addNote, addComment}) => 
             addNote("Cannot comment empty text!", "error")
             return
         }
-        if(state.commentData.trimEnd().length > 512 ){
+        if(state.commentData.trim().length > 512 ){
             addNote("Comment contains more than 512 characters!", "error")
             return
         }
         state.setPostingComment(true)
         const {data, error} = await supabase.rpc("new_comment",{
             'referenceid': referenceid,
-            'comment_data': state.commentData.trimEnd()
+            'comment_data': state.commentData.trim()
         })
         if(error){
             if(error.code === '42501'){

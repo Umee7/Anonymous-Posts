@@ -131,9 +131,9 @@ const NewPost = observer(({ addNote }) => {
     const ValidateForm = () => {
         let errors = []
         const postData = { ...NewPostState.postData };
-        postData.title = postData.title.trimEnd()
-        postData.postedBy = postData.postedBy.trimEnd()
-        postData.content = postData.content.trimEnd()
+        postData.title = postData.title.trim()
+        postData.postedBy = postData.postedBy.trim()
+        postData.content = postData.content.trim()
 
         if (postData.title.length < 5 || postData.title.length > 100) {
             errors.push("Value for title must be between 5 to 100 characters!")
@@ -183,9 +183,9 @@ const NewPost = observer(({ addNote }) => {
         referenceId += createCUId()
 
         const { data, error } = await supabase.rpc("new_post", {
-            title: NewPostState.postData.title.trimEnd(),
-            username: NewPostState.postData.postedBy.trimEnd(),
-            content: NewPostState.postData.content.trimEnd(),
+            title: NewPostState.postData.title.trim(),
+            username: NewPostState.postData.postedBy.trim(),
+            content: NewPostState.postData.content.trim(),
             files: filesIds,
             country: NewPostState.postData.country,
             category: NewPostState.postData.category,
