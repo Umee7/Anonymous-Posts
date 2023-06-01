@@ -5,25 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
     <meta name="google-site-verification" content="zVkU2oXnSS-GarUNFRXsDuqyVk01pT_TOFDu5n5AMKk" />
+    <meta name="description" content="Post anything without any sign up, just share whatever you want for free to the world.">
     <meta name="keywords" content="post,f4nsix,f4n6,ffourn6,posts,comments,new post,post anonymously,privacy,private post">
-    <title>{{title or 'F4nsix'}}</title>
-    <meta name="description" content="{{description or 'Post anything without any sign up, just share whatever you want for free to the world.'}}">
-    <meta property="og:title" content="{{title or 'F4nsix'}}">
-    <meta property="og:description" content="{{description or 'Post anything without any sign up, just share whatever you want for free to the world.'}}">
-    {% if images %}
-    {% for image in images %}
-    <meta property="og:image" content="{{image.url}}">
-    <meta property="og:image:secure_url" content="{{image.url}}">
-    <meta property="og:image:type" content="{{image.type}}">
-    {% endfor %}
-    {% endif %}
-    {% if videos %}
-    {% for video in videos %}
-    <meta property="og:video" content="{{video.url}}">
-    <meta property="og:video:secure_url" content="{{video.url}}">
-    <meta property="og:video:type" content="{{video.type}}">
-    {% endfor %}
-    {% endif %}
+    <title>F4nsix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Itim&family=Nunito+Sans&display=swap" rel="stylesheet">
