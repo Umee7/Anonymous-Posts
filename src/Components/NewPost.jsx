@@ -110,8 +110,10 @@ const NewPost = observer(({ addNote }) => {
             const file = FILES[i]['file']
             const fileType = FILES[i]['type']
             const fileId = cuid2.createId() + "-" + cuid2.createId() + "." + file.name.split(".")[file.name.split(".").length - 1]
-            const { data, error } = await supabase.storage.from("post-files").upload(fileId, file, {
-                contentType: fileType
+            const { data, error } = await supabase.storage.from("post-files").upload(
+                fileId, file, {
+                contentType: fileType,
+                cacheControl: '2599999'
             })
             if (error) {
                 addNote("Could not post your files, tryagain soon!", "error")
