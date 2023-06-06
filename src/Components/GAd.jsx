@@ -2,7 +2,10 @@ import { useEffect } from "react";
 
 const GAd = () => {
     useEffect(()=>{
-         (adsbygoogle = window.adsbygoogle || []).push({});
+        try {
+            const adsbygoogle = (window.adsbygoogle || [])
+            adsbygoogle.push({});
+        } catch(err){}
     },[])
 
     return(        
