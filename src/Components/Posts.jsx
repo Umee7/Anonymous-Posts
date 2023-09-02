@@ -101,7 +101,7 @@ const Posts = observer(({ addNote }) => {
         if(PostsState.isLoading === false){
             PostsState.clearPosts();
             PostsState.removeDeadEnd();
-            PostsState.setLastPostDateTime(new Date().toLocaleString())
+            PostsState.setLastPostDateTime(new Date().toISOString())
             
             PostsState.setLoading()
             fetchPosts(() => {
