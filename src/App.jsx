@@ -11,7 +11,7 @@ import cuid2 from "@paralleldrive/cuid2";
 import SpecificPost from "./Components/SpecificPost";
 import Questions from "./Components/Questions";
 import NotFound from "./Components/NotFound";
-import GAd from "./Components/GAd";
+
 
 
 const AppState = observable({
@@ -66,7 +66,6 @@ const App = observer(() => {
                             <Route path="/faqs" element={<Questions addNote={AppState.addNote} />} />
                             <Route path="*" element={<NotFound addNote={AppState.addNote} />} />
                         </Routes>
-                        <GAd />
                     </div>
                 </div>
             </BrowserRouter>
