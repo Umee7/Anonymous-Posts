@@ -9,7 +9,6 @@ import { useSearchParams } from "react-router-dom";
 import PostSelectionBox from "./PostSelectionBox";
 import { Countries } from "../countries";
 import { Categories } from "../categories";
-import GAd from "./GAd";
 
 
 const PostsState = observable({
