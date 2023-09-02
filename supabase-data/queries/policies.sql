@@ -37,4 +37,6 @@ WITH CHECK ((get_user_requests_count() < 15) AND (get_header('origin') = get_run
 CREATE POLICY "Allow admin to do all" ON "public"."user_requests"
 AS PERMISSIVE FOR INSERT
 TO anon
-WITH CHECK (true)
+WITH CHECK (true);
+
+create policy "Allow insert from specific origin" ON storage.objects FOR INSERT TO anon WITH CHECK ((bucket_id = 'post-files') AND (get_header('origin') = get_running_origin()));
