@@ -37,7 +37,7 @@ const SpecificPostCommentBox = observer(({referenceid, addNote, addComment}) => 
             if(data.status === "ok"){
                 addComment({
                     data: state.commentData,
-                    created_date: new Date().toLocaleString()
+                    created_date: new Date().toISOString()
                 })
                 state.setCommentData('')
                 addNote('Comment posted successfully.', 'success');
