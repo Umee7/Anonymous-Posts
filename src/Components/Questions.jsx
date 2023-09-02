@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Question from "./Question";
-import GAd from "./GAd";
 
 const questionsData =[
     {
