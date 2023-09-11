@@ -11,6 +11,7 @@ import { getCountryByCode } from "../countries";
 import { createCUId } from "../functions";
 import Button from "./FormControls/Button";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const NewPostState = observable({
@@ -45,6 +46,8 @@ const NewPostState = observable({
 })
 
 const NewPost = observer(({ addNote }) => {
+    const navigate = useNavigate()
+
     useEffect(()=>{
         document.title = "New Post"
     },[])
@@ -202,6 +205,7 @@ const NewPost = observer(({ addNote }) => {
             if (data.status === "ok") {
                 addNote("Successfully posted your post, check and share.", "success")
                 NewPostState.resetData()
+                navigate(`/p/${referenceId}`)
             } else {
                 addNote("Something went wrong, tryagain soon", "error")
             }
