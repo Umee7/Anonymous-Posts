@@ -29,7 +29,9 @@ const CarouselItem = ({postURL, postType}) => {
 
     useEffect(()=>{
         if(isRendered === true){
-            navigator.vibrate(100)
+            if (navigator && navigator.vibrate){
+                navigator.vibrate(100);
+            }
         }
         setRendered(true)
     },[objectFit])
