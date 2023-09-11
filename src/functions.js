@@ -59,6 +59,9 @@ const dateMapper = (timestamp) => {
     else if(weeks < 4){
         return `${weeks} weeks ago`
     }
+    else if(months === 1){
+        return `A month ago`
+    }
     else if(months < 12){
         return `${months} months ago`
     }
