@@ -1,5 +1,3 @@
-import { dateMapper } from "../functions";
-
 const SpecificPostHeader = (props) => {
     return (
         <div className="p-2 px-4 rounded-t">
@@ -9,7 +7,7 @@ const SpecificPostHeader = (props) => {
                     props.username ?
                         <>
                             <span>{props.username}</span>
-                            <span className="mx-2 text-white/60">&#x2022;</span>
+                            <span className="mx-2 text-black/50 dark:text-white/60">&#x2022;</span>
                         </>
                         :
                         []
