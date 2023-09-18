@@ -29,10 +29,3 @@ create table if not exists comments(
 
   post_id uuid references posts(id) on delete cascade
 );
-
-
-create table user_requests(
-  id uuid primary key default gen_random_uuid(),
-  ipaddr inet not null,
-  created_date timestamp with time zone not null default now()
-);

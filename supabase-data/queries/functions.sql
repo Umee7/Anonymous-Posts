@@ -8,18 +8,6 @@ end
 $$;
 
 
-create or replace function insert_the_request()
-returns trigger
-language plpgsql
-as $$
-begin
-  INSERT INTO user_requests(ipaddr) VALUES(split_part(hdr.ip(), ',', 1)::inet);
-  return NEW;
-end
-$$;
-
-
-
 create or replace function get_request_host()
 returns text
 language plpgsql
@@ -30,20 +18,6 @@ begin
   host := 
   return host;
 end $$;
-
-
-
-create or replace function get_user_requests_count()
-returns int
-language plpgsql
-as $$
-declare
-  counter int := 0;
-begin
-  SELECT COUNT(*) INTO counter FROM user_requests where user_requests.created_date > (now() - '01:00:00'::interval) and user_requests.ipaddr = (split_part(hdr.ip(), ',', 1)::inet);
-  return counter;
-end
-$$;
 
 
 CREATE OR REPLACE FUNCTION get_header(item text) RETURNS text
