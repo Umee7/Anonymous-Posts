@@ -14,7 +14,7 @@ const SpecificPostCommentFull = observer(((props) => {
         <h2 className="p-2 text-xl">Comments<span className="text-sm mx-1">({formatNumber(props.comments_count)})</span></h2>
         <SpecificPostCommentBox referenceid={props.reference_id} addNote={props.addNote} addComment={(comment)=>{
             state.addFrozenComment(comment)
-            props.updateCommentCount(state.frozenComments.length)
+            props.updateCommentCount(1)
         }
         } />
         <SpecificPostComments referenceId={props.reference_id} commentsCount={props.comments_count} addNote={props.addNote} frozenComments={state.frozenComments} />
