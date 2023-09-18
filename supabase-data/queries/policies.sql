@@ -34,11 +34,6 @@ To anon
 WITH CHECK (get_header('origin') = get_running_origin());
 
 
-CREATE POLICY "Allow admin to do all" ON "public"."user_requests"
-AS PERMISSIVE FOR INSERT
-TO anon
-WITH CHECK (true);
-
 create policy "Allow insert from specific origin" ON storage.objects
 FOR INSERT
 TO anon
