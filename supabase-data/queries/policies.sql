@@ -34,7 +34,6 @@ To anon
 WITH CHECK (get_header('origin') = get_running_origin());
 
 
-create policy "Allow insert from specific origin" ON storage.objects
-FOR INSERT
-TO anon
-WITH CHECK ((bucket_id = 'post-files') AND (get_header('origin') = get_running_origin()));
+CREATE POLICY "select posts files to all 8kf2mi_0" ON storage.objects FOR SELECT TO public USING (bucket_id = 'post-files');
+
+CREATE POLICY "allow to insert files 8kf2mi_0" ON storage.objects FOR INSERT TO public WITH CHECK (bucket_id = 'post-files');
